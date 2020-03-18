@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import map from "./../src/recursive/map-recursive";
+import map from "./../src/map/map-recursive";
 
 it("map should be a function", () => {
   expect(map).to.be.a("function");
