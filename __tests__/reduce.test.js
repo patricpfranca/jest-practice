@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import reduce from "../src/reduce/reduce";
+import reduceRight from "../src/reduce/reduce-right";
 
 it("reduce should be a function", () => {
   expect(reduce).to.be.a("function");
@@ -38,4 +39,10 @@ it("reduce([1, 2], (acc, item, index, array) => acc + array[index], 0) should be
   expect(
     reduce([1, 2], (acc, item, index, array) => acc + array[index], 0)
   ).to.be.deep.equal(3);
+});
+
+it("reduceRight(['c', 'tri', 'pa'], (acc, item) => acc + item, '') should return patric", () => {
+  expect(
+    reduceRight(["c", "tri", "pa"], (acc, item) => acc + item, "")
+  ).to.be.equal("patric");
 });
