@@ -4,6 +4,8 @@ const find = (arr, func) => {
       return arr[i];
     }
   }
+
+  return undefined;
 };
 
 export default find;
